@@ -6,12 +6,17 @@ import (
 	"github.com/areknoster/gofill/pkg/geom"
 )
 
-type Plane interface{
+type Plane interface {
 	Refresh()
 }
 
-type Renderer interface{
+type Renderer interface {
 	Render(w, h int) image.Image
+}
+
+type RendererMode interface {
+	Render(state State, w, h int) image.Image
+	Name() string
 }
 
 type PlaneMode interface {
@@ -20,5 +25,3 @@ type PlaneMode interface {
 	HandleDragEnd()
 	Name() string
 }
-
-

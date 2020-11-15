@@ -42,7 +42,7 @@ func NewStateStorage() *StateStorage {
 		Refresh: func() {
 		},
 	}
-	state.Mode = modes.NewMoveMesh(ss)
+	state.PlaneMode = modes.NewMoveMesh(ss)
 	ss.state = state
 return ss
 }
