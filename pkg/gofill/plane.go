@@ -14,7 +14,7 @@ type Renderer interface{
 	Render(w, h int) image.Image
 }
 
-type Mode interface {
+type PlaneMode interface {
 	HandleClick(normLoc geom.Point)
 	HandleDrag(start geom.Point, move geom.Vector)
 	HandleDragEnd()

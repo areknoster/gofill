@@ -13,17 +13,17 @@ import (
 type Plane struct {
 	widget.BaseWidget
 	renderer gofill.Renderer
-	mode gofill.Mode
+	mode gofill.PlaneMode
 	size          fyne.Size
 }
 
-func NewPlane(renderer gofill.Renderer, size fyne.Size) (*Plane, func(mode gofill.Mode)) {
+func NewPlane(renderer gofill.Renderer, size fyne.Size) (*Plane, func(mode gofill.PlaneMode)) {
 	p := &Plane{
 		size:          size,
 		renderer: renderer,
 	}
 	p.ExtendBaseWidget(p)
-	return p, func(mode gofill.Mode){
+	return p, func(mode gofill.PlaneMode){
 		p.mode = mode
 	}
 }

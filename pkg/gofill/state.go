@@ -11,10 +11,11 @@ import (
 
 type State struct{
 	Mesh      geom.Mesh
+	ShowMesh bool
 	Light     LightConfig
 	Texture   *image.RGBA
 	NormalMap *image.RGBA
-	Mode Mode
+	Mode      PlaneMode
 }
 
 type StateStorage interface{

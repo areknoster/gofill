@@ -2,8 +2,8 @@ package modes
 
 import "github.com/areknoster/gofill/pkg/gofill"
 
-func NewModesList(ss gofill.StateStorage) []gofill.Mode{
-	return []gofill.Mode{
+func NewModesList(ss gofill.StateStorage) []gofill.PlaneMode {
+	return []gofill.PlaneMode{
 		NewMoveMesh(ss),
 	}
 }

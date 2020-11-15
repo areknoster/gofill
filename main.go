@@ -8,12 +8,14 @@ import (
 
 	"fyne.io/fyne"
 	"fyne.io/fyne/app"
+	"fyne.io/fyne/layout"
 	"github.com/sirupsen/logrus"
 
 	"github.com/areknoster/gofill/pkg/modes"
 	"github.com/areknoster/gofill/pkg/plane"
 	"github.com/areknoster/gofill/pkg/render"
 	"github.com/areknoster/gofill/pkg/state"
+	"github.com/areknoster/gofill/pkg/ui"
 )
 
 type Config struct{
@@ -48,7 +50,7 @@ func main(){
 
 	var img image.Image
 	func(){
-		file, err := os.OpenFile("resources/bricks.jpg", os.O_RDONLY, 0)
+		file, err := os.OpenFile("resources/normal_bricks.jpg", os.O_RDONLY, 0)
 		if err != nil{
 			logrus.Panicf("could not open file: %s", err.Error())
 		}
@@ -62,18 +64,19 @@ func main(){
 	rect := img.Bounds()
 	rgba := image.NewRGBA(rect)
 	draw.Draw(rgba, rect, img, rect.Min, draw.Src)
-	ss := state.NewStateStorage(rgba)
+	ss := state.NewStateStorage()
+	menu := ui.NewMenuContainer(ss, window)
 
 	renderer := render.NewRenderer(ss)
 
 	plane, setMode := plane.NewPlane(renderer, cfg.canvasSize)
-	plane.Refresh()
+	ss.Refresh = plane.Refresh
 	setMode(modes.NewMoveMesh(ss))
-	//menu, setActiveEditMenu := ui.NewMenu(plane)
+
 	//plane.HandleSelect = setActiveEditMenu
 
-	//container := fyne.NewContainerWithLayout(layout.NewBorderLayout(nil, nil, menu, nil), menu, plane)
-	window.SetContent(plane)
+	container := fyne.NewContainerWithLayout(layout.NewBorderLayout(nil, nil, menu, nil), menu, plane)
+	window.SetContent(container)
 	window.SetFixedSize(true)
 
 	window.ShowAndRun()

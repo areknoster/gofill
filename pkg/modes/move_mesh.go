@@ -13,7 +13,7 @@ func NewMoveMesh(ss gofill.StateStorage) *MoveMesh {
 	return &MoveMesh{ss: ss}
 }
 
-var _ gofill.Mode = &MoveMesh{}
+var _ gofill.PlaneMode = &MoveMesh{}
 
 
 func (m *MoveMesh) HandleClick(normLoc geom.Point) {

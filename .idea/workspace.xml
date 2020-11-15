@@ -20,22 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eacc52df-e4b2-402b-abc2-1ea709030757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/modes/list.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/modes/move_mesh.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/plane/plane.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/plane/plane_renderer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/render/color.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/render/renderer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/ui/menu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gofill.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/gofill/images.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/images/local_images.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/images/rgba_from_file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/ui/images_section.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/ui/light_section.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/ui/mesh_section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom/mesh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/gofill/light.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/light.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/gofill/plane.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/plane.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/gofill/state.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/state.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/light/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/light/modes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/modes/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/modes/list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/modes/move_mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/modes/move_mesh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/plane/plane.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/plane/plane.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/renderer.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/renderer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/state/state_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/state/state_storage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/menu.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/menu.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bricks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/normal_bricks.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,64 +150,76 @@
     </state>
     <state x="517" y="-817" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605397027410" />
     <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605406084091" />
-    <state width="1029" height="304" key="GridCell.Tab.0.bottom" timestamp="1605407684119">
+    <state width="1010" height="218" key="GridCell.Tab.0.bottom" timestamp="1605444871938">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543610" />
-    <state width="1029" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605407684119" />
-    <state width="1029" height="304" key="GridCell.Tab.0.center" timestamp="1605407684118">
+    <state width="1010" height="218" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605444871938" />
+    <state width="1233" height="172" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1605442409637" />
+    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1605437739416" />
+    <state width="1010" height="218" key="GridCell.Tab.0.center" timestamp="1605444871937">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543607" />
-    <state width="1029" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605407684118" />
-    <state width="1029" height="304" key="GridCell.Tab.0.left" timestamp="1605407684118">
+    <state width="1010" height="218" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605444871937" />
+    <state width="1233" height="172" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1605442409635" />
+    <state width="699" height="245" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1605437739415" />
+    <state width="1010" height="218" key="GridCell.Tab.0.left" timestamp="1605444871936">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543605" />
-    <state width="1029" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605407684118" />
-    <state width="1029" height="304" key="GridCell.Tab.0.right" timestamp="1605407684119">
+    <state width="1010" height="218" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605444871936" />
+    <state width="1233" height="172" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1605442409634" />
+    <state width="699" height="245" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1605437739414" />
+    <state width="1010" height="218" key="GridCell.Tab.0.right" timestamp="1605444871938">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543608" />
-    <state width="1029" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605407684119" />
-    <state width="1029" height="304" key="GridCell.Tab.1.bottom" timestamp="1605407684761">
+    <state width="1010" height="218" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605444871938" />
+    <state width="1233" height="172" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1605442409637" />
+    <state width="699" height="245" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1605437739415" />
+    <state width="1229" height="432" key="GridCell.Tab.1.bottom" timestamp="1605444131717">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1029" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605407684761" />
-    <state width="1029" height="304" key="GridCell.Tab.1.center" timestamp="1605407684760">
+    <state width="1229" height="432" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605444131717" />
+    <state width="1233" height="172" key="GridCell.Tab.1.bottom/0.23.1440.795@0.23.1440.795" timestamp="1605442410137" />
+    <state width="1229" height="432" key="GridCell.Tab.1.center" timestamp="1605444131716">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1029" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605407684759" />
-    <state width="1029" height="304" key="GridCell.Tab.1.left" timestamp="1605407684758">
+    <state width="1229" height="432" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605444131716" />
+    <state width="1233" height="172" key="GridCell.Tab.1.center/0.23.1440.795@0.23.1440.795" timestamp="1605442410136" />
+    <state width="1229" height="432" key="GridCell.Tab.1.left" timestamp="1605444131715">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1029" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605407684758" />
-    <state width="1029" height="304" key="GridCell.Tab.1.right" timestamp="1605407684760">
+    <state width="1229" height="432" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605444131715" />
+    <state width="1233" height="172" key="GridCell.Tab.1.left/0.23.1440.795@0.23.1440.795" timestamp="1605442410136" />
+    <state width="1229" height="432" key="GridCell.Tab.1.right" timestamp="1605444131716">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1029" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605407684760" />
+    <state width="1229" height="432" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605444131716" />
+    <state width="1233" height="172" key="GridCell.Tab.1.right/0.23.1440.795@0.23.1440.795" timestamp="1605442410137" />
     <state x="292" y="-790" key="IDE.errors.dialog" timestamp="1605403049583">
       <screen x="-256" y="-1080" width="1920" height="1080" />
     </state>
     <state x="292" y="-790" key="IDE.errors.dialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605403049583" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1605407194614">
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1605442130070">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1605407194614" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1605442130070" />
     <state x="835" y="-917" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1605387369625">
       <screen x="-256" y="-1080" width="1920" height="1080" />
     </state>
     <state x="835" y="-917" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605387369625" />
-    <state x="605" y="261" key="refactoring.ChangeSignatureDialog" timestamp="1605404754374">
+    <state x="605" y="261" key="refactoring.ChangeSignatureDialog" timestamp="1605439873193">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="551" y="-767" key="refactoring.ChangeSignatureDialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605403703218" />
-    <state x="605" y="261" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1605404754374" />
-    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1605406711464">
+    <state x="605" y="261" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1605439873193" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1605444195980">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="369" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605390429941" />
-    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605406711464" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605444195980" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -211,9 +227,14 @@
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/pkg/render/renderer.go</url>
           <line>17</line>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="file.URI().Extension()" language="go" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

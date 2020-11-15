@@ -8,16 +8,17 @@ import (
 )
 
 type LightConfig struct {
-	SourceMovement LightPosition
+	SourceMovement LightMode
 	Color          color.RGBA
 	Ks             float64
 	Kd             float64
 	M              float64
 }
 
-type LightPosition interface{
+type LightMode interface{
 	Get() geom.Point
 	Cleanup()
+	Name() string
 }
 
-type LightPositionInit func() (LightPosition, context.CancelFunc)
+type LightPositionInit func() (LightMode, context.CancelFunc)

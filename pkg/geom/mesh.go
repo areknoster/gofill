@@ -1,15 +1,15 @@
 package geom
 
 type Mesh struct {
-	points               PointsSet
-	horizontal, vertical int
+	points PointsSet
+	X, Y   int
 }
 
 func NewMesh(horizontal, vertical int) Mesh{
 	m := Mesh{
-		points:     make([]Point, horizontal * vertical),
-		horizontal: horizontal,
-		vertical:   vertical,
+		points: make([]Point, horizontal * vertical),
+		X:      horizontal,
+		Y:      vertical,
 	}
 	for i := 0; i < horizontal; i++{
 		for j := 0; j < vertical; j++{
@@ -24,18 +24,18 @@ func NewMesh(horizontal, vertical int) Mesh{
 
 // returns -1 if does not belong to mesh
 func (m Mesh) getPointIndex(x, y int) int {
-	if x >= m.horizontal || y >= m.vertical {
+	if x >= m.X || y >= m.Y {
 		return -1
 	}
-	return x + y*m.horizontal
+	return x + y*m.X
 }
 
 func (m Mesh) GetSegments() SegmentSet {
-	v, h := m.vertical, m.horizontal
+	v, h := m.Y, m.X
 	segments := make([]Segment, 3*v*h-2*(v+h)+1)
 	s := 0
-	for i := 0; i < m.horizontal; i++ {
-		for j := 0; j < m.vertical; j++ {
+	for i := 0; i < m.X; i++ {
+		for j := 0; j < m.Y; j++ {
 			//add right
 			if -1 != m.getPointIndex(i+1, j) {
 				segments[s] = NewSegment(
