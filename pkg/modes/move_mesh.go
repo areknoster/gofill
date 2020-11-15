@@ -1,7 +1,7 @@
 package modes
 
 import (
-	"github.com/areknoster/gofill/pkg/geom"
+	"github.com/areknoster/gofill/pkg/geom2d"
 	"github.com/areknoster/gofill/pkg/gofill"
 )
 
@@ -16,11 +16,11 @@ func NewMoveMesh(ss gofill.StateStorage) *MoveMesh {
 var _ gofill.PlaneMode = &MoveMesh{}
 
 
-func (m *MoveMesh) HandleClick(normLoc geom.Point) {
+func (m *MoveMesh) HandleClick(normLoc geom2d.Point) {
 
 }
 
-func (m *MoveMesh) HandleDrag(start geom.Point, move geom.Vector) {
+func (m *MoveMesh) HandleDrag(start geom2d.Point, move geom2d.Vector) {
 }
 
 func (m *MoveMesh) HandleDragEnd() {

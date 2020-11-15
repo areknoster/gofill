@@ -29,7 +29,6 @@ func (m *Menu) newRenderingSection() fyne.CanvasObject{
 			}
 		})
 	modesRadio.SetSelected(names[0])
-	modesRadio.OnChanged(modesRadio.Selected)
 	return fyne.NewContainerWithLayout(
 		layout.NewVBoxLayout(),
 		widget.NewLabelWithStyle("Rendering", fyne.TextAlignCenter, fyne.TextStyle{

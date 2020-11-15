@@ -9,7 +9,7 @@ import (
 	"fyne.io/fyne/widget"
 	"github.com/sirupsen/logrus"
 
-	"github.com/areknoster/gofill/pkg/geom"
+	"github.com/areknoster/gofill/pkg/geom2d"
 	"github.com/areknoster/gofill/pkg/gofill"
 )
 
@@ -34,7 +34,8 @@ func (m *Menu)newMeshSection()fyne.CanvasObject{
 		v, _ := strconv.ParseInt(s, 10, 16)
 		m.setState(
 			func(state *gofill.State) {
-				state.Mesh = geom.NewMesh(int(v), state.Mesh.Y)
+				logrus.Debugf("setting mesh to %dx%d", int(v), state.Mesh.Y)
+				state.Mesh = geom2d.NewMesh(int(v), state.Mesh.Y)
 			})
 	}
 
@@ -51,7 +52,9 @@ func (m *Menu)newMeshSection()fyne.CanvasObject{
 		v, _ := strconv.ParseInt(s, 10, 16)
 		m.setState(
 			func(state *gofill.State) {
-				state.Mesh = geom.NewMesh(state.Mesh.X, int(v))
+				logrus.Debugf("setting mesh to %dx%d", state.Mesh.X, int(v))
+
+				state.Mesh = geom2d.NewMesh(state.Mesh.X, int(v))
 			})
 	}
 

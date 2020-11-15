@@ -7,7 +7,7 @@ import (
 
 	"github.com/areknoster/gofill/pkg/gofill"
 	"github.com/areknoster/gofill/pkg/normde"
-	"github.com/areknoster/gofill/pkg/render"
+	"github.com/areknoster/gofill/pkg/raster"
 )
 
 type Plane struct {
@@ -44,35 +44,32 @@ func (p *Plane) MinSize() fyne.Size{
 }
 
 func (p *Plane) Tapped(event *fyne.PointEvent) {
-	normPt := normde.NormPoint(
-		render.Pixel{X: event.Position.X, Y: event.Position.Y},
+	normPt := normde.NormPoint2D(
+		raster.Pixel{X: event.Position.X, Y: event.Position.Y},
 		p.size.Width, p.size.Height)
 	p.mode.HandleClick(normPt)
 	logrus.Debugf("Tapped: %v", normPt)
-	p.Refresh()
 }
 
 func (p *Plane) Dragged(event *fyne.DragEvent) {
-	start := normde.NormPoint(
-		render.Pixel{
+	start := normde.NormPoint2D(
+		raster.Pixel{
 			X: event.Position.X-event.DraggedX,
 			Y: event.Position.Y-event.DraggedY,
 		},
 		p.size.Width,
 		p.size.Height)
 
-	vec := normde.NormVector(
-		render.Pixel{X: event.DraggedX, Y: event.DraggedY},
+	vec := normde.NormVector2D(
+		raster.Pixel{X: event.DraggedX, Y: event.DraggedY},
 		p.size.Width, p.size.Height)
 	p.mode.HandleDrag(start, vec)
 	logrus.Debugf("Drag: start: %v, vec: %v", start, vec)
-	p.Refresh()
 }
 
 func (p *Plane) DragEnd() {
 	logrus.Debugf("Drag finished")
 	p.mode.HandleDragEnd()
-	p.Refresh()
 }
 
 

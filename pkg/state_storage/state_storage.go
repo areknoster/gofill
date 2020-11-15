@@ -1,14 +1,14 @@
-package state
+package state_storage
 
 import (
-	"image/color"
 	"sync"
 
-	"github.com/areknoster/gofill/pkg/geom"
+	"fyne.io/fyne"
+	"github.com/sirupsen/logrus"
+
+	"github.com/areknoster/gofill/pkg/geom3d"
 	"github.com/areknoster/gofill/pkg/gofill"
-	"github.com/areknoster/gofill/pkg/light"
 	"github.com/areknoster/gofill/pkg/modes"
-	"github.com/areknoster/gofill/pkg/render"
 )
 
 type StateStorage struct {
@@ -19,32 +19,24 @@ type StateStorage struct {
 
 var _ gofill.StateStorage = &StateStorage{}
 
-func NewStateStorage() *StateStorage {
+func NewStateStorage(size fyne.Size) *StateStorage {
 	state := gofill.State{
-		Mesh: geom.NewMesh(10, 10),
 		Light: gofill.LightConfig{
-			SourceMovement: light.NewRotation(),
-			Color:          render.ColorToRGBA(color.White),
-			Ks:             0.5,
-			Kd:             0.5,
-			M:              30.0,
+			ColorVector: geom3d.Vector{1.0, 1.0, 1.0},
+			Ks:          0.5,
+			Kd:          0.5,
+			M:           10.0,
 		},
+		Size: size,
 	}
-	//li := images.ChooseNormalMap
-	//li.Set(
-	//	li.ListAvailable()[1], func(rgba *image.RGBA) {
-	//		//state.Texture = rgba
-	//		state.NormalMap = rgba
-	//	})
 
 	ss := &StateStorage{
 		stateMx: &sync.Mutex{},
-		Refresh: func() {
-		},
+		Refresh: func() {},
 	}
 	state.PlaneMode = modes.NewMoveMesh(ss)
 	ss.state = state
-return ss
+	return ss
 }
 
 func (sm *StateStorage) Get() gofill.State {
@@ -55,8 +47,10 @@ func (sm *StateStorage) Get() gofill.State {
 
 func (sm *StateStorage) Set(state gofill.State) {
 	sm.stateMx.Lock()
-	defer sm.stateMx.Unlock()
 	sm.state = state
+	sm.stateMx.Unlock()
+	//prettyState, _:= json.MarshalIndent(sm.state, "", "   ")
+	//fmt.Printf("%s\n", prettyState)
+	logrus.Infof("State updated, light position: %v", state.Light.SourceMovement.Get())
 	sm.Refresh()
-
 }

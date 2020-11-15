@@ -1,4 +1,4 @@
-package geom
+package geom2d
 
 import "math"
 

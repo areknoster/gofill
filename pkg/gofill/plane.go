@@ -3,7 +3,7 @@ package gofill
 import (
 	"image"
 
-	"github.com/areknoster/gofill/pkg/geom"
+	"github.com/areknoster/gofill/pkg/geom2d"
 )
 
 type Plane interface {
@@ -15,13 +15,13 @@ type Renderer interface {
 }
 
 type RendererMode interface {
-	Render(state State, w, h int) image.Image
+	Render(state State) image.Image
 	Name() string
 }
 
 type PlaneMode interface {
-	HandleClick(normLoc geom.Point)
-	HandleDrag(start geom.Point, move geom.Vector)
+	HandleClick(normLoc geom2d.Point)
+	HandleDrag(start geom2d.Point, move geom2d.Vector)
 	HandleDragEnd()
 	Name() string
 }

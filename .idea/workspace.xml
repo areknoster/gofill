@@ -20,14 +20,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eacc52df-e4b2-402b-abc2-1ea709030757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pkg/render/modes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/ui/renderers_section.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/geom3d/norm_map.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/geom3d/point.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/geom3d/precision.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/geom3d/vector.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/geom3d/vector_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/light/light_mover.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/3d_to_2d.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/light.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/norm_map.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/norm_map_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/norm_texture.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/normde/resize_img.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/render/example_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/render/lambert.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/render/render.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/mesh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/point.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/point.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/points_set.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/points_set.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/segment.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/segment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/shape.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/shape.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/geom/vector.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/vector.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/gofill/light.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/light.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/gofill/plane.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/plane.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/gofill/state.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/state.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/render/renderer.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/renderer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/state/state_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/state/state_storage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/images/local_images.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/images/local_images.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/light/modes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/modes/move_mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/modes/move_mesh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/normde/normalize.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/normalize2d.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/plane/plane.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/plane/plane.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/brush.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/raster/brush.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/color.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/raster/color.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/line.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/raster/line.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/modes.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/modes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/renderer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/render/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/raster/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/state/state_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/state_storage/state_storage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/images_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/images_section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/light_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/light_section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/menu.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/menu.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/mesh_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/mesh_section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/ui/renderers_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/renderers_section.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +80,11 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.3/libexec" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="e797b05268bfd995929c6d60b501177bbe6559ce" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
@@ -64,6 +106,7 @@
   </component>
   <component name="RecentsManager">
     <key name="GoMoveDeclarationDialog.RECENT_KEY">
+      <recent name="$PROJECT_DIR$/pkg/render" />
       <recent name="$PROJECT_DIR$/pkg/gofill" />
       <recent name="$PROJECT_DIR$/pkg/geom" />
     </key>
@@ -72,11 +115,11 @@
       <recent name="$PROJECT_DIR$/pkg/geom" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/pkg/render/" />
       <recent name="$PROJECT_DIR$/tmp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pkg" />
-      <recent name="$PROJECT_DIR$/internal" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build github.com/areknoster/gofill">
@@ -98,9 +141,45 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestExample in github.com/areknoster/gofill/pkg/render" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gofill" />
+      <working_directory value="$PROJECT_DIR$/pkg/render" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/areknoster/gofill/pkg/render" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestExample\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRGBAToNormVersor in github.com/areknoster/gofill/pkg/normde" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gofill" />
+      <working_directory value="$PROJECT_DIR$/pkg/normde" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/areknoster/gofill/pkg/normde" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestRGBAToNormVersor\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestVector_Dot in github.com/areknoster/gofill/pkg/geom3d" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gofill" />
+      <working_directory value="$PROJECT_DIR$/pkg/geom3d" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/areknoster/gofill/pkg/geom3d" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestVector_Dot\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build github.com/areknoster/gofill" />
+        <item itemvalue="Go Test.TestExample in github.com/areknoster/gofill/pkg/render" />
+        <item itemvalue="Go Test.TestVector_Dot in github.com/areknoster/gofill/pkg/geom3d" />
+        <item itemvalue="Go Test.TestRGBAToNormVersor in github.com/areknoster/gofill/pkg/normde" />
         <item itemvalue="Go Build.go build github.com/areknoster/gofill/tmp" />
       </list>
     </recent_temporary>
@@ -133,105 +212,139 @@
       <screen x="-256" y="-1080" width="1920" height="1080" />
     </state>
     <state x="441" y="-731" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605393636480" />
-    <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser" timestamp="1605406084091">
+    <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser" timestamp="1605480683203">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="517" y="-817" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605397027410" />
-    <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605406084091" />
-    <state width="1227" height="184" key="GridCell.Tab.0.bottom" timestamp="1605456843389">
+    <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605480683203" />
+    <state x="580" y="219" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605460755971" />
+    <state x="483" y="160" key="#xdebugger.evaluate" timestamp="1605476610484">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="483" y="160" key="#xdebugger.evaluate/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605476610484" />
+    <state width="992" height="281" key="GridCell.Tab.0.bottom" timestamp="1605483395438">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1217" height="352" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864732" />
     <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543610" />
-    <state width="1227" height="184" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605456843389" />
+    <state width="1213" height="352" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611349" />
+    <state width="992" height="281" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605483395438" />
+    <state width="1215" height="352" key="GridCell.Tab.0.bottom/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442053" />
     <state width="1233" height="172" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1605442409637" />
     <state width="699" height="245" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1605437739416" />
-    <state width="1227" height="184" key="GridCell.Tab.0.center" timestamp="1605456843388">
+    <state width="992" height="281" key="GridCell.Tab.0.center" timestamp="1605483395437">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1217" height="352" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864730" />
     <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543607" />
-    <state width="1227" height="184" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605456843388" />
+    <state width="1213" height="352" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611348" />
+    <state width="992" height="281" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605483395437" />
+    <state width="1215" height="352" key="GridCell.Tab.0.center/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442051" />
     <state width="1233" height="172" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1605442409635" />
     <state width="699" height="245" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1605437739415" />
-    <state width="1227" height="184" key="GridCell.Tab.0.left" timestamp="1605456843388">
+    <state width="992" height="281" key="GridCell.Tab.0.left" timestamp="1605483395436">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1217" height="352" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864729" />
     <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543605" />
-    <state width="1227" height="184" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605456843388" />
+    <state width="1213" height="352" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611347" />
+    <state width="992" height="281" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605483395436" />
+    <state width="1215" height="352" key="GridCell.Tab.0.left/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442050" />
     <state width="1233" height="172" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1605442409634" />
     <state width="699" height="245" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1605437739414" />
-    <state width="1227" height="184" key="GridCell.Tab.0.right" timestamp="1605456843389">
+    <state width="992" height="281" key="GridCell.Tab.0.right" timestamp="1605483395437">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1217" height="352" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864731" />
     <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543608" />
-    <state width="1227" height="184" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605456843389" />
+    <state width="1213" height="352" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611348" />
+    <state width="992" height="281" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605483395437" />
+    <state width="1215" height="352" key="GridCell.Tab.0.right/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442052" />
     <state width="1233" height="172" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1605442409637" />
     <state width="699" height="245" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1605437739415" />
-    <state width="1227" height="184" key="GridCell.Tab.1.bottom" timestamp="1605456843391">
+    <state width="1213" height="352" key="GridCell.Tab.1.bottom" timestamp="1605481611353">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1227" height="184" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605456843391" />
+    <state width="1218" height="352" key="GridCell.Tab.1.bottom/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864573" />
+    <state width="1213" height="352" key="GridCell.Tab.1.bottom/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611353" />
+    <state width="1226" height="184" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605459196201" />
+    <state width="1215" height="352" key="GridCell.Tab.1.bottom/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442055" />
     <state width="1233" height="172" key="GridCell.Tab.1.bottom/0.23.1440.795@0.23.1440.795" timestamp="1605442410137" />
-    <state width="1227" height="184" key="GridCell.Tab.1.center" timestamp="1605456843390">
+    <state width="1213" height="352" key="GridCell.Tab.1.center" timestamp="1605481611351">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1227" height="184" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605456843390" />
+    <state width="1218" height="352" key="GridCell.Tab.1.center/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864570" />
+    <state width="1213" height="352" key="GridCell.Tab.1.center/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611351" />
+    <state width="1226" height="184" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605459196200" />
+    <state width="1215" height="352" key="GridCell.Tab.1.center/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442054" />
     <state width="1233" height="172" key="GridCell.Tab.1.center/0.23.1440.795@0.23.1440.795" timestamp="1605442410136" />
-    <state width="1227" height="184" key="GridCell.Tab.1.left" timestamp="1605456843389">
+    <state width="1213" height="352" key="GridCell.Tab.1.left" timestamp="1605481611350">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1227" height="184" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605456843389" />
+    <state width="1218" height="352" key="GridCell.Tab.1.left/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864569" />
+    <state width="1213" height="352" key="GridCell.Tab.1.left/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611350" />
+    <state width="1226" height="184" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605459196200" />
+    <state width="1215" height="352" key="GridCell.Tab.1.left/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442053" />
     <state width="1233" height="172" key="GridCell.Tab.1.left/0.23.1440.795@0.23.1440.795" timestamp="1605442410136" />
-    <state width="1227" height="184" key="GridCell.Tab.1.right" timestamp="1605456843390">
+    <state width="1213" height="352" key="GridCell.Tab.1.right" timestamp="1605481611352">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1227" height="184" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605456843390" />
+    <state width="1218" height="352" key="GridCell.Tab.1.right/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864572" />
+    <state width="1213" height="352" key="GridCell.Tab.1.right/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605481611352" />
+    <state width="1226" height="184" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605459196200" />
+    <state width="1215" height="352" key="GridCell.Tab.1.right/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442054" />
     <state width="1233" height="172" key="GridCell.Tab.1.right/0.23.1440.795@0.23.1440.795" timestamp="1605442410137" />
     <state x="292" y="-790" key="IDE.errors.dialog" timestamp="1605403049583">
       <screen x="-256" y="-1080" width="1920" height="1080" />
     </state>
     <state x="292" y="-790" key="IDE.errors.dialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605403049583" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1605442130070">
+    <state x="536" y="159" key="RollbackChangesDialog" timestamp="1605463151978">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="536" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605463151978" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1605477219644">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605477219644" />
     <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1605442130070" />
-    <state x="835" y="-917" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1605387369625">
-      <screen x="-256" y="-1080" width="1920" height="1080" />
+    <state x="818" y="136" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1605471593664">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="835" y="-917" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605387369625" />
-    <state x="605" y="261" key="refactoring.ChangeSignatureDialog" timestamp="1605447147260">
+    <state x="818" y="136" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605471593664" />
+    <state x="818" y="136" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1440.900@0.0.1440.900" timestamp="1605462646731" />
+    <state x="605" y="261" key="refactoring.ChangeSignatureDialog" timestamp="1605473080318">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="551" y="-767" key="refactoring.ChangeSignatureDialog/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605403703218" />
+    <state x="605" y="261" key="refactoring.ChangeSignatureDialog/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605473080318" />
     <state x="605" y="261" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1605447147260" />
-    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1605444195980">
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1605468633305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="369" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605390429941" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605468633305" />
     <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605444195980" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pkg/render/renderer.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pkg/ui/renderers_section.go</url>
+          <url>file://$PROJECT_DIR$/pkg/ui/light_section.go</url>
           <line>21</line>
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/pkg/ui/renderers_section.go</url>
-          <line>13</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/pkg/render/lambert.go</url>
+          <line>31</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
-        <watch expression="file.URI().Extension()" language="go" />
+        <watch expression="state.Light.SourceMovement.Get()" language="go" />
+        <watch expression="lo.Length() &gt; 1" language="go" />
       </configuration>
     </watches-manager>
   </component>

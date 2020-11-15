@@ -1,6 +1,8 @@
 package main
 
 import (
+	"time"
+
 	"fyne.io/fyne"
 	"fyne.io/fyne/app"
 	"fyne.io/fyne/layout"
@@ -9,7 +11,7 @@ import (
 	"github.com/areknoster/gofill/pkg/modes"
 	"github.com/areknoster/gofill/pkg/plane"
 	"github.com/areknoster/gofill/pkg/render"
-	"github.com/areknoster/gofill/pkg/state"
+	"github.com/areknoster/gofill/pkg/state_storage"
 	"github.com/areknoster/gofill/pkg/ui"
 )
 
@@ -28,9 +30,7 @@ func main(){
 	fyneApp := app.New()
 	window :=fyneApp.NewWindow(cfg.title)
 
-
-
-	ss := state.NewStateStorage()
+	ss := state_storage.NewStateStorage(cfg.canvasSize)
 	menu := ui.NewMenuContainer(ss, window)
 
 	renderer := render.NewRenderer(ss)
@@ -39,12 +39,17 @@ func main(){
 	ss.Refresh = plane.Refresh
 	setMode(modes.NewMoveMesh(ss))
 
-	//plane.HandleSelect = setActiveEditMenu
-
 	container := fyne.NewContainerWithLayout(layout.NewBorderLayout(nil, nil, menu, nil), menu, plane)
 	window.SetContent(container)
 	window.SetFixedSize(true)
-
+	go func(){
+		for{
+			time.Sleep(15 * time.Millisecond)
+			state := ss.Get()
+			state.Light.SourceMovement = state.Light.SourceMovement.Move()
+			ss.Set(state)
+		}
+	}()
 	window.ShowAndRun()
 
 

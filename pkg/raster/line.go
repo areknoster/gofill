@@ -1,4 +1,4 @@
-package render
+package raster
 
 func BresenhamLine(a, b Pixel, put Brush) {
 	if a.X > b.X {

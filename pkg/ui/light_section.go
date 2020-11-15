@@ -12,7 +12,8 @@ import (
 
 	"github.com/areknoster/gofill/pkg/gofill"
 	"github.com/areknoster/gofill/pkg/light"
-	"github.com/areknoster/gofill/pkg/render"
+	"github.com/areknoster/gofill/pkg/normde"
+	"github.com/areknoster/gofill/pkg/raster"
 )
 
 func (m *Menu) newLightSection() fyne.CanvasObject {
@@ -24,7 +25,7 @@ func (m *Menu) newLightSection() fyne.CanvasObject {
 				func(c color.Color) {
 					m.setState(
 						func(state *gofill.State) {
-							state.Light.Color = render.ColorToRGBA(c)
+							state.Light.ColorVector = normde.NormRGBAToVec(raster.ColorToRGBA(c))
 						})
 				},
 				m.window,

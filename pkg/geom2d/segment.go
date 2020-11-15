@@ -1,4 +1,4 @@
-package geom
+package geom2d
 
 type Segment struct{
 	A,B Point

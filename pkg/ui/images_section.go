@@ -10,6 +10,7 @@ import (
 
 	"github.com/areknoster/gofill/pkg/gofill"
 	"github.com/areknoster/gofill/pkg/images"
+	"github.com/areknoster/gofill/pkg/normde"
 )
 
 func (m *Menu) newTextureSection() fyne.CanvasObject {
@@ -21,7 +22,7 @@ func (m *Menu) newTextureSection() fyne.CanvasObject {
 				logrus.Debugf("selecting local image: %s", s)
 				m.setState(
 					func(state *gofill.State) {
-						state.Texture = rgba
+						state.Texture = normde.RGBAImageToSizedVectorMap(rgba, state.Size)
 					})
 			})
 		if err != nil {
@@ -30,7 +31,7 @@ func (m *Menu) newTextureSection() fyne.CanvasObject {
 	}
 	selectLocal := widget.NewSelect(
 		available, onSelect)
-	selectLocal.SetSelected(available[0])
+	selectLocal.SetSelected("kasia")
 	return fyne.NewContainerWithLayout(
 		layout.NewVBoxLayout(),
 		widget.NewLabelWithStyle("Select texture", fyne.TextAlignCenter, fyne.TextStyle{
@@ -50,7 +51,7 @@ func (m *Menu) newNormalMapSelection() fyne.CanvasObject {
 				logrus.Debugf("selecting local image: %s", s)
 				m.setState(
 					func(state *gofill.State) {
-						state.NormalMap = rgba
+						state.NormalMap = normde.RGBAToSizedNormMap(rgba, state.Size)
 					})
 			})
 		if err != nil {
@@ -59,7 +60,7 @@ func (m *Menu) newNormalMapSelection() fyne.CanvasObject {
 	}
 	selectLocal := widget.NewSelect(
 		available, onSelect)
-	selectLocal.SetSelected(available[0])
+	selectLocal.SetSelected("bricks")
 	return fyne.NewContainerWithLayout(
 		layout.NewVBoxLayout(),
 		widget.NewLabelWithStyle("Select normal map", fyne.TextAlignCenter, fyne.TextStyle{

@@ -1,4 +1,4 @@
-package geom
+package geom2d
 
 type Mesh struct {
 	points PointsSet

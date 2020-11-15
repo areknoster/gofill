@@ -34,6 +34,8 @@ func NewMenuContainer(storage gofill.StateStorage, window fyne.Window) *fyne.Con
 		m.newTextureSection(),
 		widget.NewSeparator(),
 		m.newNormalMapSelection(),
+		widget.NewSeparator(),
+		m.newRenderingSection(),
 	)
 
 	return vMenu

@@ -1,21 +1,23 @@
 package gofill
 
 import (
-	"image"
+	"fyne.io/fyne"
 
-	"github.com/areknoster/gofill/pkg/geom"
+	"github.com/areknoster/gofill/pkg/geom2d"
+	"github.com/areknoster/gofill/pkg/geom3d"
 )
 
 
 
 
 type State struct{
-	Mesh      geom.Mesh
-	ShowMesh  bool
-	Light     LightConfig
-	Texture   *image.RGBA
-	NormalMap *image.RGBA
-	PlaneMode PlaneMode
+	Mesh         geom2d.Mesh `json:"-"`
+	ShowMesh     bool
+	Light        LightConfig
+	Size         fyne.Size
+	Texture      *geom3d.VectorMap `json:"-"`
+	NormalMap    *geom3d.VectorMap `json:"-"`
+	PlaneMode    PlaneMode
 	RendererMode RendererMode
 }
 
