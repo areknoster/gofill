@@ -20,42 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eacc52df-e4b2-402b-abc2-1ea709030757" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pkg/geom2d/mesh_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/normde/cross.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/raster/ex_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/raster/scan_line.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/render/render_mesh.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom2d/mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/mesh.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom2d/point.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/point.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom2d/segment.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/edge.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom2d/shape.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/shape.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom2d/vector.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom2d/vector.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/geom3d/vector.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/geom3d/vector.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/gofill/plane.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/plane.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/gofill/state.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/gofill/state.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/images/local_images.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/images/local_images.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/light/light_mover.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/light/light_mover.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/modes/list.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/modes/move_mesh.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/plane/modes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/normde/light.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/light.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/normde/norm_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/norm_map.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/normde/norm_texture.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/norm_texture.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/normde/normalize2d.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/normalize2d.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/normde/resize_img.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/normde/resize_img.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/raster/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/raster/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/render/lambert.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/lambert.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/render/modes.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/modes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/render/render.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/render/render.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/state_storage/state_storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/state_storage/state_storage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/ui/images_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/images_section.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/ui/light_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/light_section.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/ui/mesh_section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/ui/mesh_section.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/kasia.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,52 +186,52 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="483" y="160" key="#xdebugger.evaluate/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605476610484" />
-    <state width="1398" height="340" key="GridCell.Tab.0.bottom" timestamp="1605626771465">
+    <state width="1398" height="340" key="GridCell.Tab.0.bottom" timestamp="1605628711604">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.bottom/0.0.1440.818/-256.-1057.1920.1057@0.0.1440.818" timestamp="1605570881781" />
     <state width="1217" height="352" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864732" />
     <state width="1878" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543610" />
-    <state width="1398" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605626771465" />
+    <state width="1398" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605628711604" />
     <state width="1398" height="340" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605622190353" />
     <state width="1398" height="281" key="GridCell.Tab.0.bottom/0.23.1440.792@0.23.1440.792" timestamp="1605619265756" />
     <state width="1215" height="352" key="GridCell.Tab.0.bottom/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442053" />
     <state width="984" height="281" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1605486363450" />
     <state width="984" height="281" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1605486679842" />
     <state width="1207" height="352" key="GridCell.Tab.0.bottom/0.23.1440.877/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605521479448" />
-    <state width="1398" height="340" key="GridCell.Tab.0.center" timestamp="1605626771463">
+    <state width="1398" height="340" key="GridCell.Tab.0.center" timestamp="1605628711602">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.center/0.0.1440.818/-256.-1057.1920.1057@0.0.1440.818" timestamp="1605570881777" />
     <state width="1217" height="352" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864730" />
     <state width="1878" height="305" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543607" />
-    <state width="1398" height="340" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605626771463" />
+    <state width="1398" height="340" key="GridCell.Tab.0.center/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605628711602" />
     <state width="1398" height="340" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605622190351" />
     <state width="1398" height="281" key="GridCell.Tab.0.center/0.23.1440.792@0.23.1440.792" timestamp="1605619265755" />
     <state width="1215" height="352" key="GridCell.Tab.0.center/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442051" />
     <state width="984" height="281" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1605486363449" />
     <state width="984" height="281" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1605486679841" />
     <state width="1207" height="352" key="GridCell.Tab.0.center/0.23.1440.877/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605521479447" />
-    <state width="1398" height="340" key="GridCell.Tab.0.left" timestamp="1605626771462">
+    <state width="1398" height="340" key="GridCell.Tab.0.left" timestamp="1605628711599">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.left/0.0.1440.818/-256.-1057.1920.1057@0.0.1440.818" timestamp="1605570881775" />
     <state width="1217" height="352" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864729" />
     <state width="1878" height="305" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543605" />
-    <state width="1398" height="340" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605626771462" />
+    <state width="1398" height="340" key="GridCell.Tab.0.left/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605628711599" />
     <state width="1398" height="340" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605622190350" />
     <state width="1398" height="281" key="GridCell.Tab.0.left/0.23.1440.792@0.23.1440.792" timestamp="1605619265754" />
     <state width="1215" height="352" key="GridCell.Tab.0.left/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442050" />
     <state width="984" height="281" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1605486363449" />
     <state width="984" height="281" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1605486679840" />
     <state width="1207" height="352" key="GridCell.Tab.0.left/0.23.1440.877/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605521479446" />
-    <state width="1398" height="340" key="GridCell.Tab.0.right" timestamp="1605626771464">
+    <state width="1398" height="340" key="GridCell.Tab.0.right" timestamp="1605628711603">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="396" key="GridCell.Tab.0.right/0.0.1440.818/-256.-1057.1920.1057@0.0.1440.818" timestamp="1605570881779" />
     <state width="1217" height="352" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1057.1920.1057@0.0.1440.900" timestamp="1605476864731" />
     <state width="1878" height="305" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@-256.-1080.1920.1080" timestamp="1605399543608" />
-    <state width="1398" height="340" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605626771464" />
+    <state width="1398" height="340" key="GridCell.Tab.0.right/0.0.1440.900/-256.-1080.1920.1080@0.0.1440.900" timestamp="1605628711603" />
     <state width="1398" height="340" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605622190352" />
     <state width="1398" height="281" key="GridCell.Tab.0.right/0.23.1440.792@0.23.1440.792" timestamp="1605619265755" />
     <state width="1215" height="352" key="GridCell.Tab.0.right/0.23.1440.795/-256.-1057.1920.1057@0.23.1440.795" timestamp="1605479442052" />
