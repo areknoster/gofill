@@ -19,7 +19,8 @@ func NewRenderer(stateStorage gofill.StateStorage) *Renderer {
 
 func (r *Renderer) Render(w, h int) image.Image {
 	state := r.stateStorage.Get()
-	return state.RendererMode.Render(state)
+	render := state.RendererMode.Render(state)
+	return putMesh(state, render)
 }
 
 var _ gofill.Renderer = &Renderer{}

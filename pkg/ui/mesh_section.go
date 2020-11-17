@@ -14,10 +14,14 @@ import (
 )
 
 func (m *Menu)newMeshSection()fyne.CanvasObject{
+	m.setState(
+		func(state *gofill.State) {
+			state.Mesh = geom2d.NewMesh(6,6)
+		})
 	validator := func(s string) error {
 		v, err := strconv.ParseInt(s, 10, 16)
-		if v < 1 || v > 20{
-			return errors.New("wrong value: v must be in [1,20]")
+		if v < 2 || v > 100{
+			return errors.New("wrong value: v must be in [2,100]")
 		}
 		return err
 	}

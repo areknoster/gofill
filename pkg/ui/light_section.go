@@ -61,6 +61,7 @@ func (m *Menu) newLightSection() fyne.CanvasObject {
 			})
 		ksSlider.Value = f
 	}
+	ksSlider.SetValue(0.5)
 
 	kdSlider := widget.NewSlider(0, 1.0)
 	kdSlider.Step = 0.01
@@ -71,9 +72,10 @@ func (m *Menu) newLightSection() fyne.CanvasObject {
 			})
 		kdSlider.Value = f
 	}
+	kdSlider.SetValue(0.5)
 
 	mSlider := widget.NewSlider(0, 100.0)
-	mSlider.Step = 0.5
+	mSlider.Step = 0.1
 	mSlider.OnChanged = func(f float64) {
 		m.setState(
 			func(state *gofill.State) {
@@ -81,7 +83,7 @@ func (m *Menu) newLightSection() fyne.CanvasObject {
 			})
 		mSlider.Value = f
 	}
-
+	mSlider.SetValue(30.0)
 	modesRadio.Horizontal = true
 	modesRadio.SetSelected(modes[0].Name())
 	return fyne.NewContainerWithLayout(

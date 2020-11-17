@@ -31,16 +31,16 @@ func (m *Menu) newTextureSection() fyne.CanvasObject {
 	}
 	selectLocal := widget.NewSelect(
 		available, onSelect)
-	selectLocal.SetSelected("kasia")
+	selectLocal.SetSelected("moro")
 	return fyne.NewContainerWithLayout(
 		layout.NewVBoxLayout(),
-		widget.NewLabelWithStyle("Select texture", fyne.TextAlignCenter, fyne.TextStyle{
-			Bold:      true,
-		}),
+		widget.NewLabelWithStyle(
+			"Select texture", fyne.TextAlignCenter, fyne.TextStyle{
+				Bold: true,
+			}),
 		selectLocal,
 	)
 }
-
 
 func (m *Menu) newNormalMapSelection() fyne.CanvasObject {
 	local := images.ChooseNormalMap
@@ -61,11 +61,45 @@ func (m *Menu) newNormalMapSelection() fyne.CanvasObject {
 	selectLocal := widget.NewSelect(
 		available, onSelect)
 	selectLocal.SetSelected("bricks")
+
+	uniform := widget.NewButton(
+		"uniform", func() {
+			m.setState(
+				func(state *gofill.State) {
+					state.NormalMap = normde.NewUniform(state.Size)
+				})
+		})
+
+
+	waveSlider := widget.NewSlider(10, 10000)
+	waveSlider.Step = 1
+	waveSlider.OnChanged = func(f float64) {
+		m.setState(
+			func(state *gofill.State) {
+				state.WavesCoef = f
+			})
+		waveSlider.Value = f
+	}
+	waveSlider.SetValue(100)
+
+
+	wave := widget.NewButton(
+		"waves", func() {
+			m.setState(
+				func(state *gofill.State) {
+					state.NormalMap = normde.NewWave(state.Size, state.WavesCoef )
+				})
+		})
+
 	return fyne.NewContainerWithLayout(
 		layout.NewVBoxLayout(),
-		widget.NewLabelWithStyle("Select normal map", fyne.TextAlignCenter, fyne.TextStyle{
-			Bold:      true,
-		}),
+		widget.NewLabelWithStyle(
+			"Select normal map", fyne.TextAlignCenter, fyne.TextStyle{
+				Bold: true,
+			}),
 		selectLocal,
+		uniform,
+		wave,
+		waveSlider,
 	)
 }

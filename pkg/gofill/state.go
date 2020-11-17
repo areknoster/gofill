@@ -7,10 +7,7 @@ import (
 	"github.com/areknoster/gofill/pkg/geom3d"
 )
 
-
-
-
-type State struct{
+type State struct {
 	Mesh         geom2d.Mesh `json:"-"`
 	ShowMesh     bool
 	Light        LightConfig
@@ -19,10 +16,10 @@ type State struct{
 	NormalMap    *geom3d.VectorMap `json:"-"`
 	PlaneMode    PlaneMode
 	RendererMode RendererMode
+	WavesCoef    float64
 }
 
-type StateStorage interface{
+type StateStorage interface {
 	Get() State
 	Set(State)
 }
-

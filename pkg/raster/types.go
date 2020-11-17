@@ -13,4 +13,5 @@ func (p Pixel) MoveByVec(v Pixel) Pixel{
 
 
 
+
 type DrawLine func(a,b Pixel, put Brush)

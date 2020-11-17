@@ -47,12 +47,12 @@ var ChooseNormalMap LocalImages = map[string]string{
 	"bricks" : "resources/normal_bricks.jpg",
 	"shapes" : "resources/normal_shapes.png",
 	"all colors": "resources/normal_allcolors.jpeg",
+	"sci-fi" : "resources/normal_sci_fi.jpg",
 }
 
 var ChooseTexture LocalImages = map[string]string{
 	"moro" : "resources/moro_texture.png",
 	"red" : "resources/red_texture.jpeg",
-	"kasia" : "resources/kasia.JPG",
 }
 
 

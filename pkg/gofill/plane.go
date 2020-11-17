@@ -15,7 +15,7 @@ type Renderer interface {
 }
 
 type RendererMode interface {
-	Render(state State) image.Image
+	Render(state State) *image.RGBA
 	Name() string
 }
 

@@ -8,7 +8,15 @@ type Shape struct {
 	PointsSet
 }
 
+func NewShape(pointsSet PointsSet) Shape {
+	return Shape{PointsSet: pointsSet}
+}
+
+
+
 type ShapeSet []Shape
+
+
 
 func Middle(s Shape) Point {
 	p := Point{0, 0}
@@ -36,12 +44,12 @@ func (ss ShapeSet) ClosestToShape(p Point) int {
 	return minIndex
 }
 
-func (s Shape) ToSegmentSet() SegmentSet{
-	ss := make([]Segment, len(s.PointsSet))
+func (s Shape) ToEdgeSet() EdgeSet {
+	ss := make([]Edge, len(s.PointsSet))
 	for i:= 0; i < len(ss) -1; i++ {
-		ss[i] = NewSegment(s.PointsSet[i], s.PointsSet[i+1])
+		ss[i] = NewEdge(s.PointsSet[i], s.PointsSet[i+1])
 	}
-	ss[len(ss) - 1] = NewSegment(s.PointsSet[len(s.PointsSet) -1], s.PointsSet[0])
+	ss[len(ss) - 1] = NewEdge(s.PointsSet[len(s.PointsSet) -1], s.PointsSet[0])
 	return ss
 }
 

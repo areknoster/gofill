@@ -1,6 +1,8 @@
 package geom3d
 
-import "math"
+import (
+	"math"
+)
 
 type Vector struct {
 	X, Y, Z Fl
@@ -53,11 +55,35 @@ func (a Vector) Dot(b Vector) Fl{
 	return a.X * b.X + a.Y * b.Y + a.Z * b.Z
 }
 
-func (a Vector) Cross(b Vector) Vector{
+func (a Vector) MultiplyByElem(b Vector) Vector{
 	return Vector{
 		X: a.X * b.X,
 		Y: a.Y * b.Y,
 		Z: a.Z * b.Z,
+	}
+}
+
+func (a Vector) Cross(b Vector) Vector {
+	return Vector{
+		X: a.Y*b.Z - a.Z*b.Y,
+		Y: a.Z*b.X - a.X*b.Z,
+		Z: a.X*b.Y - a.Y*b.X,
+	}
+}
+
+
+func (v Vector) Normalize() Vector{
+	max := -math.MaxFloat64
+	for _, val := range []float64{v.X, v.Y, v.Z}{
+		if val > max{
+			max = val
+		}
+	}
+
+	return Vector{
+		X: v.X/max,
+		Y: v.Y/max,
+		Z: v.Z/max,
 	}
 }
 

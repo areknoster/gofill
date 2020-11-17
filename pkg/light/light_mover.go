@@ -37,9 +37,9 @@ func NewRotation(opts ...MovingCircleOpt) Rotation {
 			Z: 0.5,
 		},
 		radianXY:   0,
-		angleJump:  math.Pi / 100,
+		angleJump:  math.Pi / 40,
 		zAmplitude: 0.2,
-		zJump:      0.01,
+		zJump:      0.03,
 
 	}
 	for _, opt := range opts {

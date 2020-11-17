@@ -4,11 +4,10 @@ import (
 	"sync"
 
 	"fyne.io/fyne"
-	"github.com/sirupsen/logrus"
 
 	"github.com/areknoster/gofill/pkg/geom3d"
 	"github.com/areknoster/gofill/pkg/gofill"
-	"github.com/areknoster/gofill/pkg/modes"
+	"github.com/areknoster/gofill/pkg/plane"
 )
 
 type StateStorage struct {
@@ -34,7 +33,7 @@ func NewStateStorage(size fyne.Size) *StateStorage {
 		stateMx: &sync.Mutex{},
 		Refresh: func() {},
 	}
-	state.PlaneMode = modes.NewMoveMesh(ss)
+	state.PlaneMode = plane.NewMoveMesh(ss)
 	ss.state = state
 	return ss
 }
@@ -49,8 +48,5 @@ func (sm *StateStorage) Set(state gofill.State) {
 	sm.stateMx.Lock()
 	sm.state = state
 	sm.stateMx.Unlock()
-	//prettyState, _:= json.MarshalIndent(sm.state, "", "   ")
-	//fmt.Printf("%s\n", prettyState)
-	logrus.Infof("State updated, light position: %v", state.Light.SourceMovement.Get())
 	sm.Refresh()
 }

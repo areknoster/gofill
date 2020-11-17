@@ -13,5 +13,11 @@ func (v Point) MoveByVector(vec Vector) Point {
 	}
 }
 
+func (source Point)VectorTo(dest Point)Vector{
+	return Vector{
+		X: dest.X - source.X,
+		Y: dest.Y - source.Y,
+	}
+}
 
 var NanPoint = Point{math.NaN(), math.NaN()}

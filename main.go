@@ -8,7 +8,6 @@ import (
 	"fyne.io/fyne/layout"
 	"github.com/sirupsen/logrus"
 
-	"github.com/areknoster/gofill/pkg/modes"
 	"github.com/areknoster/gofill/pkg/plane"
 	"github.com/areknoster/gofill/pkg/render"
 	"github.com/areknoster/gofill/pkg/state_storage"
@@ -21,30 +20,30 @@ type Config struct{
 }
 
 func main(){
-	logrus.SetLevel(logrus.DebugLevel)
+	logrus.SetLevel(logrus.ErrorLevel)
 	cfg := Config{
 		title:      "GoFill",
-		canvasSize: fyne.Size{600, 600},
+		canvasSize: fyne.Size{700, 700},
 	}
 
 	fyneApp := app.New()
 	window :=fyneApp.NewWindow(cfg.title)
 
 	ss := state_storage.NewStateStorage(cfg.canvasSize)
-	menu := ui.NewMenuContainer(ss, window)
 
 	renderer := render.NewRenderer(ss)
 
-	plane, setMode := plane.NewPlane(renderer, cfg.canvasSize)
-	ss.Refresh = plane.Refresh
-	setMode(modes.NewMoveMesh(ss))
+	nPlane, setMode := plane.NewPlane(renderer, cfg.canvasSize)
+	ss.Refresh = nPlane.Refresh
+	setMode(plane.NewMoveMesh(ss))
 
-	container := fyne.NewContainerWithLayout(layout.NewBorderLayout(nil, nil, menu, nil), menu, plane)
+	menu := ui.NewMenuContainer(ss, window)
+	container := fyne.NewContainerWithLayout(layout.NewBorderLayout(nil, nil, menu, nil), menu, nPlane)
 	window.SetContent(container)
 	window.SetFixedSize(true)
 	go func(){
 		for{
-			time.Sleep(15 * time.Millisecond)
+			time.Sleep(70 * time.Millisecond)
 			state := ss.Get()
 			state.Light.SourceMovement = state.Light.SourceMovement.Move()
 			ss.Set(state)

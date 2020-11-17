@@ -10,7 +10,7 @@ import (
 
 func ResizeRGBA(toResize *image.RGBA, size fyne.Size)  *image.RGBA{
 	resized := image.NewRGBA(image.Rectangle{
-		Max: image.Point{size.Width, size.Height},
+		Max: image.Point{size.Width-1, size.Height -1},
 	})
 	err := rez.Convert(resized, toResize, rez.NewBicubicFilter())
 	if err!= nil{

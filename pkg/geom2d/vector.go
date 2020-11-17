@@ -53,6 +53,10 @@ func (v Vector) TimesScalar(s float64) Vector {
 	return Vector{s * v.X, s * v.Y}
 }
 
+func (v Vector) DeltaXY() float64 {
+	return v.X / v.Y
+}
+
 func (v Vector) Add(va Vector) Vector {
 	return Vector{v.X + va.X, v.Y + va.Y}
 }
@@ -64,9 +68,10 @@ func (v Vector) Length() float64 {
 	return math.Sqrt(v.SqNorm())
 }
 
-func AngleToVecor(angle, length float64) Vector{
+func AngleToVecor(angle, length float64) Vector {
 	return Vector{
 		X: length * math.Cos(angle),
 		Y: length * math.Sin(angle),
 	}
 }
+

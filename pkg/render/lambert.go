@@ -10,7 +10,7 @@ import (
 	"github.com/areknoster/gofill/pkg/raster"
 )
 
-func lambertColor(state gofill.State, x, y int) color.RGBA {
+func lambertColor(state *gofill.State, x, y int) geom3d.Vector{
 	kd := state.Light.Kd
 	ks := state.Light.Ks
 	m := state.Light.M
@@ -23,11 +23,21 @@ func lambertColor(state gofill.State, x, y int) color.RGBA {
 	N := state.NormalMap.At(x, y)
 	V := geom3d.Vector{0, 0, 1.0}
 	R := N.TimesScalar(2 * N.Dot(L)).Substract(L)
+	if R.Z < 0 {
+		R = geom3d.Vector{0,0,0}
+	}
 	cosNL := N.Dot(L)
+	if cosNL <=0{
+		return geom3d.Vector{0,0,0}
+	}
 	cosVRpowm := math.Pow(V.Dot(R), m)
-	crossLlLo := ll.Cross(lo)
+
+	crossLlLo := ll.MultiplyByElem(lo)
 	dPart := crossLlLo.TimesScalar(kd * cosNL)
 	sPart := crossLlLo.TimesScalar(ks * cosVRpowm)
-	lambert := sPart.Add(dPart)
-	return normde.DenormVecToRGBA(lambert)
+	return sPart.Add(dPart)
+}
+
+func lambertPixel(state *gofill.State, x, y int) color.RGBA {
+	return normde.DenormVecToRGBA(lambertColor(state,x,y))
 }
