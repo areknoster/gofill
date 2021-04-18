@@ -43,13 +43,11 @@ func main(){
 	window.SetFixedSize(true)
 	go func(){
 		for{
-			time.Sleep(70 * time.Millisecond)
+			time.Sleep(30 * time.Millisecond)
 			state := ss.Get()
 			state.Light.SourceMovement = state.Light.SourceMovement.Move()
 			ss.Set(state)
 		}
 	}()
 	window.ShowAndRun()
-
-
 }

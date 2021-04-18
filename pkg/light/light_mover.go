@@ -37,7 +37,7 @@ func NewRotation(opts ...MovingCircleOpt) Rotation {
 			Z: 0.5,
 		},
 		radianXY:   0,
-		angleJump:  math.Pi / 40,
+		angleJump:  math.Pi / 120,
 		zAmplitude: 0.2,
 		zJump:      0.03,
 
